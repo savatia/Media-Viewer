@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediaViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="600" Width="800"
+        Loaded="MainWindow_Loaded"
+        >
+    <DockPanel>
+        <Button DockPanel.Dock="Top" Content="Media Player" Click="Header_Click"></Button>
+        <ContentControl x:Name="currentView"/>
+    </DockPanel>
 </Window>
