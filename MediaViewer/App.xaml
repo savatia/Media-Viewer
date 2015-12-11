@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:MediaViewer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\ColorsAndBrushes.xaml"/>
+                <ResourceDictionary Source="Resources\DefaultStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

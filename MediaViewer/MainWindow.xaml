@@ -9,7 +9,17 @@
         Loaded="MainWindow_Loaded"
         >
     <DockPanel>
-        <Button DockPanel.Dock="Top" Content="Media Player" Click="Header_Click"></Button>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 8">
+            <Button Click="Header_Click" Background="{StaticResource redBrush}">
+                <Polygon Fill="{StaticResource yellowBrush}" Points="0,10 11,0 22,10 18,10 18,20 4,20 4,10" />
+            </Button>
+            <Canvas Width="35" Height="25">
+                <Ellipse Fill="{StaticResource redBrush}" Width="20" Height="20" Canvas.Top="5"/>
+                <Ellipse Fill="{StaticResource orangeBrush}" Width="20" Height="20" Canvas.Top="5" Canvas.Left="6"/>
+                <Ellipse Fill="{StaticResource yellowBrush}" Width="20" Height="20" Canvas.Top="5" Canvas.Left="12"/>
+            </Canvas>
+            <TextBlock Style="{StaticResource title}" Text="Media Viewer" VerticalAlignment="Center"/>
+        </StackPanel>
         <ContentControl x:Name="currentView"/>
     </DockPanel>
 </Window>

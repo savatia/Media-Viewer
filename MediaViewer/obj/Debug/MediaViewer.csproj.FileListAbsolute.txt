@@ -23,3 +23,6 @@ C:\Users\Savatia\Documents\Visual Studio 2015\Projects\MediaViewer\MediaViewer\o
 C:\Users\Savatia\Documents\Visual Studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Savatia\Documents\Visual Studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\Views\MusicView.baml
 C:\Users\Savatia\Documents\Visual Studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\Views\VideoView.baml
+C:\Users\Savatia\documents\visual studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\App.baml
+C:\Users\Savatia\documents\visual studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\Resources\ColorsAndBrushes.baml
+C:\Users\Savatia\documents\visual studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\Resources\DefaultStyles.baml

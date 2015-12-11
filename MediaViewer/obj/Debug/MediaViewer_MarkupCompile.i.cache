@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Savatia\Documents\Visual Studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\
+C:\Users\Savatia\documents\visual studio 2015\Projects\MediaViewer\MediaViewer\obj\Debug\
 MediaViewer
 none
 false
 DEBUG;TRACE
-C:\Users\Savatia\Documents\Visual Studio 2015\Projects\MediaViewer\MediaViewer\App.xaml
-61553356362
+C:\Users\Savatia\documents\visual studio 2015\Projects\MediaViewer\MediaViewer\App.xaml
+8-1791372693
 
 192041609023
 13738642453
-MainWindow.xaml;UserControls\MediaPlayer.xaml;Views\MenuView.xaml;Views\MusicView.xaml;Views\PictureView.xaml;Views\VideoView.xaml;
+MainWindow.xaml;Resources\ColorsAndBrushes.xaml;Resources\DefaultStyles.xaml;UserControls\MediaPlayer.xaml;Views\MenuView.xaml;Views\MusicView.xaml;Views\PictureView.xaml;Views\VideoView.xaml;
 
-False
+True
 

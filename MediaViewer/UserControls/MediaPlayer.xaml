@@ -7,20 +7,64 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
-        <Grid DockPanel.Dock="Bottom">
+        <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Center" Width="400" Height="50" Background="{StaticResource yellowBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="2" Content="Stop" Click="Stop_Click" />
-            <Button Grid.Column="3" Content="Play" Click="Play_Click" />
-            <ToggleButton Grid.Column="4" Content="Mute" IsChecked="{Binding ElementName=mediaElement, Path=IsMuted}" />
-            <Slider Grid.Column="5" Minimum="0" Maximum="1" Value="{Binding ElementName=mediaElement, Path=Volume}"/>
+            <Grid Grid.Column="1" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Click="Stop_Click">
+                    <Rectangle Width="18" Height="20" Fill="{StaticResource redBrush}" RadiusX="1" RadiusY="1" Stroke="{StaticResource orangeBrush}" StrokeThickness="1"/>
+                </Button>
+                <Button Grid.Column="1" Click="Play_Click" >
+                    <Grid>
+                            <Polygon Fill="{StaticResource yellowBrush}" Stroke="Gray" Points="0,0 18,10 0,18" />
+                            <Canvas Visibility="Hidden">
+                                <Rectangle Height="18" Fill="{StaticResource yellowBrush}" Stroke="{StaticResource orangeBrush}" Width="6"/>
+                                <Rectangle Height="18" Fill="{StaticResource yellowBrush}" Stroke="{StaticResource orangeBrush}" Width="6" Canvas.Left="8"/>
+                            </Canvas>
+                        </Grid>
+                    </Button>
+                <ToggleButton Grid.Column="2" IsChecked="{Binding ElementName=mediaElement, Path=IsMuted}" >
+                    <Canvas Width="20" Height="20">
+                        <!-- the speaker -->
+                        <Path Fill="{StaticResource yellowBrush}" Stroke="{StaticResource redBrush}" StrokeLineJoin="Round">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure StartPoint="12,5" IsClosed="True">
+                                        <LineSegment Point="0,6" />
+                                        <PolyLineSegment Points="0,14 12,15 17,20" />
+                                        <ArcSegment Point="17,0" Size="30,30"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <!-- highlight -->
+                        <Path Fill="White">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure StartPoint="13,6" IsClosed="True">
+                                        <PolyLineSegment Points="1,7 1,11 17.5,11" />
+                                        <ArcSegment Point="16.5,2" Size="30,30"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <!-- sound waves -->
+                        <Polygon Points="20,5 25,0 27,3" Fill="{StaticResource redBrush}" />
+                        <Polygon Points="20,10 28,9 27,6" Fill="{StaticResource redBrush}" />
+                        <Polygon Points="20,13 26,17 27,13" Fill="{StaticResource redBrush}" />
+                        <Polygon Points="20,17 24,21 26,18" Fill="{StaticResource redBrush}" />
+                    </Canvas>
+                </ToggleButton>
+            </Grid>
+            <Slider Grid.Column="2" Minimum="0" Maximum="1" Value="{Binding ElementName=mediaElement, Path=Volume}"/>
         </Grid>
         <Slider x:Name="progressSlider" DockPanel.Dock="Bottom" Minimum="0" LargeChange="1000" PreviewMouseLeftButtonDown="progressSlider_MouseDown" PreviewMouseLeftButtonUp="progressSlider_MouseUp"/>
         <MediaElement x:Name="mediaElement" DockPanel.Dock="Top" LoadedBehavior="Manual" MediaOpened="mediaElement_MediaOpened" MediaEnded="mediaElement_MediaEnded"/>

@@ -34,6 +34,9 @@ namespace MediaViewer
             currentView.Content = view;
         }
 
- 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

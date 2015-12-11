@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:MediaViewer.Resources">
+    <SolidColorBrush x:Key="yellowBrush" Color="#FFFFB03B"/>
+    <SolidColorBrush x:Key="orangeBrush" Color="#FFB64926"/>
+    <SolidColorBrush x:Key="redBrush" Color="#FF8E2800"/>
+    <SolidColorBrush x:Key="textBrush" Color="#FF000000"/>
+</ResourceDictionary>
